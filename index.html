@@ -12,9 +12,10 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #0b1423 0%, #1a2a45 45%, #0b1423 100%);
             line-height: 1.6;
         }
+
         nav {
             background-color: #343a40;
             color: white;
@@ -39,10 +40,26 @@
             font-weight: 400;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #ffc107;
         }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+        }
+
         .hero {
             background-image: url('gymsoca.jpg');
             background-size: cover;
@@ -77,6 +94,7 @@
             font-size: 1.5em;
             margin: 20px 0 0 0;
         }
+
         section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -100,6 +118,15 @@
             background: #ffc107;
             margin: 10px auto;
         }
+
+        .about {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
         .founder {
             background-color: #fff;
             padding: 40px;
@@ -111,6 +138,7 @@
             color: #667eea;
             font-size: 2em;
         }
+
         .services ul {
             list-style: none;
             padding: 0;
@@ -132,6 +160,60 @@
             color: #667eea;
             font-size: 1.2em;
         }
+
+        .plans ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .plans li {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .plans li:hover {
+            transform: translateY(-5px);
+        }
+        .plans .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        .plans li ul {
+            text-align: left;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .plans li ul li {
+            margin: 5px 0;
+            background: none;
+            padding: 0;
+            box-shadow: none;
+        }
+        .plans li ul li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        .plan-starter {
+            border-top: 5px solid #28a745;
+        }
+        .plan-strongman {
+            border-top: 5px solid #007bff;
+        }
+        .plan-titan {
+            border-top: 5px solid #ffc107;
+        }
+        .plan-legend {
+            border-top: 5px solid #6c757d;
+        }
+
         .contact {
             background-color: #343a40;
             color: white;
@@ -141,9 +223,9 @@
         .contact p {
             margin: 10px 0;
         }
+
         footer {
             background-color: #212529;
-            background: rgba(0,0,0,0.1);
             color: white;
             padding: 20px;
             font-size: 0.9em;
@@ -202,6 +284,8 @@
             <li><a href="#about">Sobre nosotros</a></li>
             <li><a href="#founder">Fundador</a></li>
             <li><a href="#services">Servicios</a></li>
+            <li><a href="#plans">Planes</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -240,11 +324,68 @@
         </ul>
     </section>
     
+    <section id="plans" class="plans">
+        <h2>Planes de Entrenamiento</h2>
+        <ul>
+            <li class="plan-starter">
+                <h3>🟢 Plan Starter</h3>
+                <p class="price">$60.000</p>
+                <p>El más económico</p>
+                <p><strong>Incluye:</strong></p>
+                <ul>
+                    <li>Acceso al gimnasio</li>
+                    <li>Uso de máquinas y pesas</li>
+                    <li>Rutina inicial</li>
+                </ul>
+                <p>👉 Para personas que están comenzando.</p>
+            </li>
+            <li class="plan-strongman">
+                <h3>🔵 Plan Strongman</h3>
+                <p class="price">$90.000</p>
+                <p>⭐ el que más se vende</p>
+                <p><strong>Incluye:</strong></p>
+                <ul>
+                    <li>Acceso ilimitado</li>
+                    <li>Rutina personalizada</li>
+                    <li>Evaluación física mensual</li>
+                    <li>Acceso a clases grupales</li>
+                </ul>
+                <p>👉 Para personas que entrenan en serio.</p>
+            </li>
+            <li class="plan-titan">
+                <h3>🟠 Plan Titan</h3>
+                <p class="price">$130.000</p>
+                <p>Para clientes avanzados</p>
+                <p><strong>Incluye:</strong></p>
+                <ul>
+                    <li>Todo lo anterior</li>
+                    <li>2 sesiones de entrenador personal al mes</li>
+                    <li>Descuento en suplementos</li>
+                    <li>Acceso prioritario a clases</li>
+                </ul>
+                <p>👉 Para quienes quieren subir de nivel.</p>
+            </li>
+            <li class="plan-legend">
+                <h3>⚫ Plan Legend</h3>
+                <p class="price">$180.000</p>
+                <p>Premium</p>
+                <p><strong>Incluye:</strong></p>
+                <ul>
+                    <li>Todo incluido</li>
+                    <li>Entrenador personal</li>
+                    <li>Locker personal</li>
+                    <li>Descuentos grandes en suplementos y bar saludable</li>
+                </ul>
+                <p>👉 La experiencia completa del gimnasio.</p>
+            </li>
+        </ul>
+    </section>
+    
     <section id="contact" class="contact">
         <h2>Contáctanos</h2>
         <p>¿Listo para empezar tu viaje hacia la hipertrofia? Ponte en contacto con nosotros.</p>
-        <p>Dirección: [Tu dirección aquí]</p>
-        <p>Teléfono: [Tu teléfono aquí]</p>
+        <p>Dirección: [xxxxxx]</p>
+        <p>Teléfono: [xxxxxxxxx]</p>
         <p>Email: info@gymsoca.com</p>
     </section>
     
