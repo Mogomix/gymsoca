@@ -3,404 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymSoca - Entrenamiento de Hipertrofia</title>
+    <title>Gym Soca - Entrenamiento de Hipertrofia</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pF1Nf5tukpYIbEYgCGh3KXQMOY2r4+f01OwhZy8p4q/SeQ0VQku2QX93F0sR8DvZKL4dM1z7G3j2Hw+j9Yd2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: linear-gradient(135deg, #0b1423 0%, #1a2a45 45%, #0b1423 100%);
-            line-height: 1.6;
-        }
-
-        nav {
-            background-color: #343a40;
-            color: white;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-        nav li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffc107;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3.5em;
-            font-weight: 700;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0 0;
-        }
-
-        .hero {
-            background-image: url('gymsoca.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero div {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.5em;
-            margin: 20px 0 0 0;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .about, .founder, .services, .contact {
-            margin-bottom: 60px;
-        }
-        h2 {
-            color: #343a40;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: #ffc107;
-            margin: 10px auto;
-        }
-
-        .about {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .founder {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .founder h3 {
-            color: #667eea;
-            font-size: 2em;
-        }
-
-        .services ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .services li {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .services li:hover {
-            transform: translateY(-5px);
-        }
-        .services li strong {
-            color: #667eea;
-            font-size: 1.2em;
-        }
-
-        .plans ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .plans li {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-        .plans li:hover {
-            transform: translateY(-5px);
-        }
-        .plans .price {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin: 10px 0;
-        }
-        .plans li ul {
-            text-align: left;
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .plans li ul li {
-            margin: 5px 0;
-            background: none;
-            padding: 0;
-            box-shadow: none;
-        }
-        .plans li ul li:before {
-            content: "✓ ";
-            color: #28a745;
-            font-weight: bold;
-        }
-        .plan-starter {
-            border-top: 5px solid #28a745;
-        }
-        .plan-strongman {
-            border-top: 5px solid #007bff;
-        }
-        .plan-titan {
-            border-top: 5px solid #ffc107;
-        }
-        .plan-legend {
-            border-top: 5px solid #6c757d;
-        }
-
-        .contact {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            border-radius: 10px;
-        }
-        .contact p {
-            margin: 10px 0;
-        }
-
-        footer {
-            background-color: #212529;
-            color: white;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .socials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .socials a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 999px;
-            transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-        }
-        .socials a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-        }
-        .socials a i {
-            margin-right: 8px;
-        }
-
-        .socials a.facebook { background: #1877f2; }
-        .socials a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
-        .socials a.twitter { background: #1da1f2; }
-        .socials a.youtube { background: #ff0000; }
-        .socials a.tiktok { background: #000000; }
-        .socials a.whatsapp { background: #25d366; }
-
-        .socials a.facebook:hover { background: #145dbf; }
-        .socials a.instagram:hover { opacity: 0.95; }
-        .socials a.twitter:hover { background: #1991db; }
-        .socials a.youtube:hover { background: #d60000; }
-        .socials a.tiktok:hover { opacity: 0.85; }
-        .socials a.whatsapp:hover { background: #1ebe57; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/gymsoca.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
-        <ul>
-            <li><a href="#about">Sobre nosotros</a></li>
-            <li><a href="#founder">Fundador</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#plans">Planes</a></li>
-            <li><a href="tienda.html">Tienda</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>GymSoca</h1>
-        <p>Especialistas en entrenamiento de hipertrofia</p>
-    </header>
-    
-    <div class="hero">
-        <div>
-            <h1>Transforma tu cuerpo</h1>
-            <p>Entrenamiento profesional para lograr hipertrofia muscular óptima</p>
+        <div class="container">
+            <img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#plans">Planes</a></li>
+                <li><a href="calculator.html">Calculadora</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="#transformations">Transformaciones</a></li>
+                <li><a href="#trainers">Entrenadores</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#location">Ubicación</a></li>
+            </ul>
+            <a href="inscripcion.html" class="cta-button">Inscríbete</a>
         </div>
-    </div>
-    
-    <section id="about" class="about">
-        <h2>Sobre nosotros</h2>
-        <p>Si buscas un lugar serio para desarrollar músculo, mejorar tu físico y entrenar con disciplina, GymSoca es la opción ideal. Nuestro gimnasio se especializa en hipertrofia muscular, creando un ambiente motivador donde cada sesión se enfoca en resultados tangibles. Ofrecemos entrenamientos intensos basados en técnicas efectivas de fuerza e hipertrofia, combinando ejercicios compuestos con trabajo específico para cada grupo muscular.</p>
-        <p>En GymSoca, valoramos la constancia, la disciplina y el progreso continuo, principios esenciales para transformar tu cuerpo. Tanto si eres principiante como si tienes experiencia, encontrarás un espacio para entrenar seriamente y mejorar día tras día. Aquí, el esfuerzo se convierte en resultados reales. 🔥</p>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div>
+            <h1>Construye el físico que siempre quisiste</h1>
+            <p>Entrenamiento especializado en hipertrofia, fuerza y transformación física.</p>
+            <div class="buttons">
+                <a href="#plans" class="btn-primary">Ver Planes</a>
+                <a href="inscripcion.html" class="btn-secondary">Inscribirme ahora</a>
+            </div>
+        </div>
     </section>
-    
-    <section id="founder" class="founder">
-        <h2>Nuestro Fundador</h2>
-        <h3>Brayan Carrillo</h3>
-        <p>Profesional en deportes con años de experiencia en el campo del fitness y la hipertrofia. Brayan Carrillo es el creador y propietario de GymSoca, dedicado a ayudar a las personas a alcanzar su máximo potencial físico a través de métodos probados y personalizados.</p>
+
+    <!-- About -->
+    <section class="about" id="about" data-aos="fade-up">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>En Gym Soca, nos especializamos en entrenamientos de hipertrofia y fuerza. Nuestro enfoque es ayudar a nuestros clientes a alcanzar sus objetivos de transformación física de manera segura y efectiva.</p>
+        </div>
     </section>
-    
-    <section id="services" class="services">
-        <h2>Nuestros servicios</h2>
-        <ul>
-            <li><strong>Entrenamiento personalizado:</strong> Rutinas diseñadas específicamente para tus necesidades y objetivos.</li>
-            <li><strong>Asesoramiento nutricional:</strong> Planes alimenticios que potencian el crecimiento muscular.</li>
-            <li><strong>Evaluación y seguimiento:</strong> Monitoreo continuo de tu progreso para ajustes precisos.</li>
-            <li><strong>Clases especializadas:</strong> Sesiones grupales para motivación y aprendizaje compartido.</li>
-        </ul>
+
+    <!-- Services -->
+    <section class="services" id="services" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Entrenamiento de Hipertrofia</h3>
+                    <p>Programas personalizados para aumentar masa muscular.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-weight-hanging"></i>
+                    <h3>Entrenamiento de Fuerza</h3>
+                    <p>Desarrollo de fuerza máxima y resistencia.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Clases Grupales</h3>
+                    <p>Sesiones motivadoras en grupo.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="plans" class="plans">
-        <h2>Planes de Entrenamiento</h2>
-        <ul>
-            <li class="plan-starter">
-                <h3>🟢 Plan Starter</h3>
-                <p class="price">$60.000</p>
-                <p>El más económico</p>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>Acceso al gimnasio</li>
-                    <li>Uso de máquinas y pesas</li>
-                    <li>Rutina inicial</li>
-                </ul>
-                <p>👉 Para personas que están comenzando.</p>
-            </li>
-            <li class="plan-strongman">
-                <h3>🔵 Plan Strongman</h3>
-                <p class="price">$90.000</p>
-                <p>⭐ el que más se vende</p>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>Acceso ilimitado</li>
-                    <li>Rutina personalizada</li>
-                    <li>Evaluación física mensual</li>
-                    <li>Acceso a clases grupales</li>
-                </ul>
-                <p>👉 Para personas que entrenan en serio.</p>
-            </li>
-            <li class="plan-titan">
-                <h3>🟠 Plan Titan</h3>
-                <p class="price">$130.000</p>
-                <p>Para clientes avanzados</p>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>Todo lo anterior</li>
-                    <li>2 sesiones de entrenador personal al mes</li>
-                    <li>Descuento en suplementos</li>
-                    <li>Acceso prioritario a clases</li>
-                </ul>
-                <p>👉 Para quienes quieren subir de nivel.</p>
-            </li>
-            <li class="plan-legend">
-                <h3>⚫ Plan Legend</h3>
-                <p class="price">$180.000</p>
-                <p>Premium</p>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>Todo incluido</li>
-                    <li>Entrenador personal</li>
-                    <li>Locker personal</li>
-                    <li>Descuentos grandes en suplementos y bar saludable</li>
-                </ul>
-                <p>👉 La experiencia completa del gimnasio.</p>
-            </li>
-        </ul>
+
+    <!-- Plans -->
+    <section class="plans" id="plans" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestros Planes</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Plan Básico</h3>
+                    <div class="price">$50/mes</div>
+                    <p>Acceso básico al gimnasio</p>
+                    <a href="inscripcion.html?plan=Plan%20Basico" class="btn-primary">Elegir Plan</a>
+                </div>
+                <div class="card popular">
+                    <h3>Plan Premium</h3>
+                    <div class="price">$80/mes</div>
+                    <p>Acceso completo + entrenador personal</p>
+                    <a href="inscripcion.html?plan=Plan%20Premium" class="btn-primary">Elegir Plan</a>
+                </div>
+                <div class="card">
+                    <h3>Plan VIP</h3>
+                    <div class="price">$120/mes</div>
+                    <p>Todo incluido + nutrición</p>
+                    <a href="inscripcion.html?plan=Plan%20VIP" class="btn-primary">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="contact" class="contact">
-        <h2>Contáctanos</h2>
-        <p>¿Listo para empezar tu viaje hacia la hipertrofia? Ponte en contacto con nosotros.</p>
-        <p>Dirección: [xxxxxx]</p>
-        <p>Teléfono: [xxxxxxxxx]</p>
-        <p>Email: info@gymsoca.com</p>
+
+    <!-- Transformations -->
+    <section class="transformations" id="transformations" data-aos="fade-up">
+        <div class="container">
+            <h2>Transformaciones</h2>
+            <div class="transformation">
+                <img src="img/hombrecambio.jpg" alt="Antes">
+                <div>
+                    <h3>Juan</h3>
+                    <p>3 meses de entrenamiento</p>
+                    <p>+5 kg de masa muscular</p>
+                </div>
+                <img src="img/mujercambio.jpeg" alt="Después">
+            </div>
+        </div>
     </section>
-    
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 GymSoca. Todos los derechos reservados. Fundado por Brayan Carrillo.</p>
-            <div class="socials">
-                    <a class="facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i>Facebook</a>
-                    <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a class="twitter" href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Twitter</a>
-                    <a class="youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i>YouTube</a>
-                    <a class="tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i>TikTok</a>
-                    <a class="whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+
+    <!-- Trainers -->
+    <section class="trainers" id="trainers" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestros Entrenadores</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="img/brayancarrillo.jpg" alt="Brayan Carrillo">
+                    <h3>Brayan Carrillo</h3>
+                    <p>Especialista en hipertrofia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store -->
+    <section class="store" id="store" data-aos="fade-up">
+        <div class="container">
+            <h2>Tienda</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="suplementos">Suplementos</button>
+                <button class="filter-btn" data-filter="equipamiento">Equipamiento</button>
+                <button class="filter-btn" data-filter="ropa">Ropa</button>
+            </div>
+            <div class="grid">
+                <div class="card" data-category="suplementos">
+                    <img src="img/sentadillabarra.avif" alt="Producto 1">
+                    <h3>Proteína Whey</h3>
+                    <div class="price">$30</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="card" data-category="suplementos">
+                    <img src="img/sentadillabarra.avif" alt="Producto 2">
+                    <h3>Creatina</h3>
+                    <div class="price">$25</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="card" data-category="equipamiento">
+                    <img src="img/sentadillabarra.avif" alt="Producto 3">
+                    <h3>Guantes de Levantamiento</h3>
+                    <div class="price">$20</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="card" data-category="ropa">
+                    <img src="img/sentadillabarra.avif" alt="Producto 4">
+                    <h3>Camiseta Gym Soca</h3>
+                    <div class="price">$15</div>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery" data-aos="fade-up">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="grid">
+                <img src="img/pesomuertobarra.webp" alt="Peso Muerto">
+                <img src="img/presinclinadobarra.webp" alt="Press Inclinado">
+                <img src="img/sentadillabarra.avif" alt="Sentadilla con Barra">
+                <img src="img/brayancarrillo.jpg" alt="Fundador Brayan Carrillo">
+                <img src="img/hombrecambio.jpg" alt="Transformación Hombre">
+                <img src="img/mujercambio.jpeg" alt="Transformación Mujer">
+                <img src="img/gymsoca.jpg" alt="Gimnasio Gym Soca">
+                <img src="img/guantes.jpg" alt="Guantes de Levantamiento">
+                <img src="img/proteina.jpg" alt="Suplementos Proteína">
+                <img src="img/gymsoca.jpg" alt="Interior del gimnasio">
+                <img src="img/proteina.jpg" alt="Suplementación deportiva">
+                <img src="img/guantes.jpg" alt="Accesorios de entrenamiento">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"Excelente gimnasio, resultados increíbles!"</p>
+                <cite>- Juan Pérez</cite>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"Los entrenadores son profesionales y motivadores."</p>
+                <cite>- María García</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestras Estadísticas</h2>
+            <div class="grid">
+                <div class="stat">
+                    <div class="number" data-target="500">0</div>
+                    <p>Clientes Satisfechos</p>
+                </div>
+                <div class="stat">
+                    <div class="number" data-target="1000">0</div>
+                    <p>Horas de Entrenamiento</p>
+                </div>
+                <div class="stat">
+                    <div class="number" data-target="50">0</div>
+                    <p>Transformaciones</p>
+                </div>
+                <div class="stat">
+                    <div class="number" data-target="10">0</div>
+                    <p>Años de Experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location" id="location" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestra Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395509814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonas%2C%20Gambir%2C%20Central%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1584712689274!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Social Media Buttons -->
+    <a href="https://wa.me/573017760661" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/gymsoca" class="instagram-float" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://facebook.com/gymsoca" class="facebook-float" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo">
+                    <p>Transforma tu cuerpo con nosotros.</p>
+                </div>
+                <div>
+                    <h4>Horario</h4>
+                    <p>Lunes a sábado<br>6:00 AM - 10:00 PM</p>
+                    <h4>Dirección</h4>
+                    <p>Calle Principal 123<br>Ciudad, País</p>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +57 301 760 0661</p>
+                    <p>Email: info@gymsoca.com</p>
+                    <p>WhatsApp: <a href="https://wa.me/573017760661" target="_blank">+57 301 760 0661</a></p>
+                </div>
+                <div>
+                    <h4>Síguenos</h4>
+                    <div class="socials">
+                        <a href="https://instagram.com/gymsoca" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/573017760661" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/gymsoca" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/gymsoca" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com/gymsoca" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -6,325 +6,291 @@
     <title>Tienda GymSoca - Suplementos y Equipamiento Deportivo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pF1Nf5tukpYIbEYgCGh3KXQMOY2r4+f01OwhZy8p4q/SeQ0VQku2QX93F0sR8DvZKL4dM1z7G3j2Hw+j9Yd2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: linear-gradient(135deg, #0b1423 0%, #1a2a45 45%, #0b1423 100%);
-            line-height: 1.6;
-        }
-
-        nav {
-            background-color: #343a40;
-            color: white;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-        nav li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffc107;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3.5em;
-            font-weight: 700;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0 0;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .products, .supplements, .drinks, .equipment {
-            margin-bottom: 60px;
-        }
-        h2 {
-            color: #343a40;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: #ffc107;
-            margin: 10px auto;
-        }
-
-        .products ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .products li {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-        .products li:hover {
-            transform: translateY(-5px);
-        }
-        .products .price {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-            margin: 10px 0;
-        }
-        .products li i {
-            font-size: 3em;
-            color: #ffc107;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background-color: #212529;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .socials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .socials a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 999px;
-            transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-        }
-        .socials a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-        }
-        .socials a i {
-            margin-right: 8px;
-        }
-
-        .socials a.facebook { background: #1877f2; }
-        .socials a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
-        .socials a.twitter { background: #1da1f2; }
-        .socials a.youtube { background: #ff0000; }
-        .socials a.tiktok { background: #000000; }
-        .socials a.whatsapp { background: #25d366; }
-
-        .socials a.facebook:hover { background: #145dbf; }
-        .socials a.instagram:hover { opacity: 0.95; }
-        .socials a.twitter:hover { background: #1991db; }
-        .socials a.youtube:hover { background: #d60000; }
-        .socials a.tiktok:hover { opacity: 0.85; }
-        .socials a.whatsapp:hover { background: #1ebe57; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/gymsoca.jpg">
 </head>
-<body>
+<body class="store-page">
     <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#supplements">Suplementos</a></li>
-            <li><a href="#drinks">Bebidas</a></li>
-            <li><a href="#equipment">Equipamiento</a></li>
-            <li><a href="#clothing">Ropa</a></li>
-        </ul>
+        <div class="container">
+            <a href="index.html"><img src="img/gymsoca.jpg" alt="Logo GymSoca" class="logo"></a>
+            <ul id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="calculator.html">Calculadora</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="#supplements">Suplementos</a></li>
+                <li><a href="#drinks">Bebidas</a></li>
+                <li><a href="#equipment">Equipamiento</a></li>
+                <li><a href="#clothing">Ropa</a></li>
+                <li><a href="#bar">Bar Fitness</a></li>
+                <li><a href="#merch">Merch</a></li>
+            </ul>
+        </div>
     </nav>
     
     <header>
         <h1>Tienda GymSoca</h1>
         <p>Todo lo que necesitas para tu entrenamiento: suplementos, bebidas y equipamiento deportivo</p>
+        <div class="store-filters" aria-label="Filtros de categorías de tienda">
+            <button class="store-filter-btn active" type="button" data-filter="all">Todo</button>
+            <button class="store-filter-btn" type="button" data-filter="supplements">Suplementos</button>
+            <button class="store-filter-btn" type="button" data-filter="drinks">Bebidas</button>
+            <button class="store-filter-btn" type="button" data-filter="equipment">Equipamiento</button>
+            <button class="store-filter-btn" type="button" data-filter="clothing">Ropa</button>
+            <button class="store-filter-btn" type="button" data-filter="bar">Bar Fitness</button>
+            <button class="store-filter-btn" type="button" data-filter="merch">Merch</button>
+        </div>
     </header>
     
-    <section id="supplements" class="products">
+    <section id="supplements" class="products product-section" data-category="supplements">
         <h2>Suplementos</h2>
         <ul>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Proteína">
                 <i class="fas fa-dumbbell"></i>
                 <h3>Proteína por Scoop</h3>
-                <p>Proteína de alta calidad para recuperación muscular.</p>
+                <p>Proteína de alta calidad para recuperación muscular. Disponible en sabores vainilla, chocolate y fresa.</p>
                 <p class="price">$6.000 - $10.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Batidos">
                 <i class="fas fa-glass-martini-alt"></i>
                 <h3>Batidos Proteína</h3>
-                <p>Bebidas listas para consumir con proteínas.</p>
+                <p>Bebidas listas para consumir con proteínas. Ideales para post-entrenamiento.</p>
                 <p class="price">$10.000 - $18.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Barritas">
                 <i class="fas fa-cookie-bite"></i>
                 <h3>Barritas Proteicas</h3>
-                <p>Snacks ricos en proteínas para cualquier momento.</p>
+                <p>Snacks ricos en proteínas para cualquier momento. Sin azúcares añadidos.</p>
                 <p class="price">$8.000 - $12.000</p>
+                <button>Comprar Ahora</button>
             </li>
         </ul>
     </section>
     
-    <section id="drinks" class="products">
+    <section id="drinks" class="products product-section" data-category="drinks">
         <h2>Bebidas</h2>
         <ul>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Energética">
                 <i class="fas fa-bolt"></i>
                 <h3>Bebida Energética</h3>
-                <p>Bebida para aumentar la energía antes del workout.</p>
+                <p>Bebida para aumentar la energía antes del workout. Con cafeína natural.</p>
                 <p class="price">$6.000 - $12.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Agua">
                 <i class="fas fa-tint"></i>
                 <h3>Agua Alcalina</h3>
-                <p>Agua con pH balanceado para mejor hidratación.</p>
+                <p>Agua con pH balanceado para mejor hidratación. Ideal para deportistas.</p>
                 <p class="price">$4.000 - $6.000</p>
+                <button>Comprar Ahora</button>
             </li>
         </ul>
     </section>
     
-    <section id="equipment" class="products">
+    <section id="equipment" class="products product-section" data-category="equipment">
         <h2>Equipamiento Deportivo</h2>
         <ul>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Guantes">
                 <i class="fas fa-hand-paper"></i>
                 <h3>Guantes Gym</h3>
-                <p>Protege tus manos durante los entrenamientos.</p>
+                <p>Protege tus manos durante los entrenamientos. Material resistente y cómodo.</p>
                 <p class="price">$70.000 - $90.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Bandas">
                 <i class="fas fa-ring"></i>
                 <h3>Bandas Elásticas</h3>
-                <p>Para ejercicios de resistencia y movilidad.</p>
+                <p>Para ejercicios de resistencia y movilidad. Diferentes niveles de resistencia.</p>
                 <p class="price">$40.000 - $60.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Cinturón">
                 <i class="fas fa-weight-hanging"></i>
                 <h3>Cinturón de Levantamiento</h3>
-                <p>Apoyo lumbar para levantamientos pesados.</p>
+                <p>Apoyo lumbar para levantamientos pesados. Ajustable y duradero.</p>
                 <p class="price">$120.000 - $180.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Straps">
                 <i class="fas fa-grip-lines"></i>
                 <h3>Straps (Agarre para Pesas)</h3>
-                <p>Mejora el agarre en ejercicios con pesas.</p>
+                <p>Mejora el agarre en ejercicios con pesas. Evita resbalones.</p>
                 <p class="price">$60.000 - $80.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Rodilleras">
                 <i class="fas fa-knee"></i>
                 <h3>Rodilleras Gym</h3>
-                <p>Protección y soporte para las rodillas.</p>
+                <p>Protección y soporte para las rodillas. Ideal para squats y sentadillas.</p>
                 <p class="price">$140.000 - $200.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Muñequeras">
                 <i class="fas fa-hand-sparkles"></i>
                 <h3>Muñequeras</h3>
-                <p>Apoyo para muñecas durante ejercicios.</p>
+                <p>Apoyo para muñecas durante ejercicios. Previene lesiones.</p>
                 <p class="price">$60.000 - $80.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Cuerda">
                 <i class="fas fa-jumping-rope"></i>
                 <h3>Cuerda para Saltar</h3>
-                <p>Para entrenamientos de cardio intensos.</p>
+                <p>Para entrenamientos de cardio intensos. Ajustable y ligera.</p>
                 <p class="price">$50.000 - $90.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Foam Roller">
                 <i class="fas fa-circle"></i>
                 <h3>Foam Roller</h3>
-                <p>Rodillo para masajes y recuperación muscular.</p>
+                <p>Rodillo para masajes y recuperación muscular. Alivia tensiones.</p>
                 <p class="price">$70.000 - $100.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Shaker">
                 <i class="fas fa-shaker"></i>
                 <h3>Shaker para Proteína</h3>
-                <p>Mezclador perfecto para batidos proteicos.</p>
+                <p>Mezclador perfecto para batidos proteicos. Fácil de usar y limpiar.</p>
                 <p class="price">$25.000 - $40.000</p>
+                <button>Comprar Ahora</button>
             </li>
         </ul>
     </section>
     
-    <section id="clothing" class="products">
+    <section id="clothing" class="products product-section" data-category="clothing">
         <h2>Ropa Deportiva</h2>
         <ul>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Camisetas">
                 <i class="fas fa-tshirt"></i>
                 <h3>Camisetas Gym</h3>
-                <p>Camisetas cómodas y transpirables para entrenar.</p>
+                <p>Camisetas cómodas y transpirables para entrenar. Con logo GymSoca.</p>
                 <p class="price">$50.000 - $90.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Camisillas">
                 <i class="fas fa-shirt"></i>
                 <h3>Camisillas Stringer</h3>
-                <p>Camisillas ligeras para máxima ventilación.</p>
+                <p>Camisillas ligeras para máxima ventilación. Perfectas para verano.</p>
                 <p class="price">$60.000 - $80.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Shorts">
                 <i class="fas fa-shorts"></i>
                 <h3>Shorts Deportivos</h3>
-                <p>Shorts cómodos para libertad de movimiento.</p>
+                <p>Shorts cómodos para libertad de movimiento. Bolsillos incluidos.</p>
                 <p class="price">$60.000 - $90.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Leggings">
                 <i class="fas fa-socks"></i>
                 <h3>Leggings Mujer</h3>
-                <p>Leggings ajustados y elásticos para mujeres.</p>
+                <p>Leggings ajustados y elásticos para mujeres. Alta compresión.</p>
                 <p class="price">$70.000 - $120.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Sudaderas">
                 <i class="fas fa-hoodie"></i>
                 <h3>Sudaderas Gym</h3>
-                <p>Sudaderas con capucha para entrenamientos frescos.</p>
+                <p>Sudaderas con capucha para entrenamientos frescos. Estilo urbano.</p>
                 <p class="price">$120.000 - $180.000</p>
+                <button>Comprar Ahora</button>
             </li>
             <li>
+                <img src="img/sentadillabarra.avif" alt="Gorras">
                 <i class="fas fa-hat-cowboy"></i>
                 <h3>Gorras Deportivas</h3>
-                <p>Gorras para protegerte del sol durante actividades.</p>
+                <p>Gorras para protegerte del sol durante actividades. Ajustables.</p>
                 <p class="price">$40.000 - $70.000</p>
+                <button>Comprar Ahora</button>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="bar" class="bar product-section" data-category="bar">
+        <h2>Bar Saludable Gym Soca</h2>
+        <ul>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Batido Muscle Builder">
+                <h3>Batido Muscle Builder</h3>
+                <p>Proteína, banano, avena, mantequilla de maní.</p>
+                <p class="price">$12.000</p>
+                <button>Ordenar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Jugo Natural">
+                <h3>Jugo Natural de Naranja</h3>
+                <p>Jugo fresco de naranjas orgánicas.</p>
+                <p class="price">$8.000</p>
+                <button>Ordenar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Bebida Energética">
+                <h3>Bebida Energética</h3>
+                <p>Con cafeína y electrolitos para máxima energía.</p>
+                <p class="price">$10.000</p>
+                <button>Ordenar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Snacks">
+                <h3>Snacks Fitness</h3>
+                <p>Barritas y nueces para recuperación.</p>
+                <p class="price">$6.000</p>
+                <button>Ordenar Ahora</button>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="merch" class="merch product-section" data-category="merch">
+        <h2>Merch Oficial Gym Soca</h2>
+        <p>🔥 Entrena con el estilo Gym Soca.</p>
+        <ul>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Camiseta">
+                <h3>Camiseta Gym Soca</h3>
+                <p>Camiseta negra con logo en rojo.</p>
+                <p class="price">$70.000</p>
+                <button>Comprar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Hoodie">
+                <h3>Hoodie Gym Soca</h3>
+                <p>Sudadera con capucha y estampado.</p>
+                <p class="price">$150.000</p>
+                <button>Comprar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Botella">
+                <h3>Botella Reutilizable</h3>
+                <p>Botella de acero inoxidable con logo.</p>
+                <p class="price">$50.000</p>
+                <button>Comprar Ahora</button>
+            </li>
+            <li>
+                <img src="img/sentadillabarra.avif" alt="Straps">
+                <h3>Straps Personalizados</h3>
+                <p>Agarres con logo Gym Soca.</p>
+                <p class="price">$80.000</p>
+                <button>Comprar Ahora</button>
             </li>
         </ul>
     </section>
@@ -333,14 +299,13 @@
         <div class="footer-content">
             <p>&copy; 2026 GymSoca. Todos los derechos reservados. Fundado por Brayan Carrillo.</p>
             <div class="socials">
-                <a class="facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i>Facebook</a>
-                <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>Instagram</a>
-                <a class="twitter" href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Twitter</a>
-                <a class="youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i>YouTube</a>
-                <a class="tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i>TikTok</a>
-                <a class="whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://facebook.com/gymsoca" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/gymsoca" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/gymsoca" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/gymsoca" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

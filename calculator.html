@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Fitness - Gym Soca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pF1Nf5tukpYIbEYgCGh3KXQMOY2r4+f01OwhZy8p4q/SeQ0VQku2QX93F0sR8DvZKL4dM1z7G3j2Hw+j9Yd2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/gymsoca.jpg">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="index.html"><img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo"></a>
+            <ul>
+                <li><a href="index.html#about">Sobre Nosotros</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="index.html#plans">Planes</a></li>
+                <li><a href="calculator.html">Calculadora</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="index.html#transformations">Transformaciones</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="index.html#gallery">Galería</a></li>
+                <li><a href="index.html#testimonials">Testimonios</a></li>
+                <li><a href="index.html#location">Ubicación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>Calculadora Fitness</h1>
+            <p>Calcula tu IMC, calorías y plan personalizado</p>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator">
+        <div class="container">
+            <h2>Calcula tu Progreso</h2>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <img src="img/proteina.jpg" alt="Proteína" style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+            </div>
+            <form>
+                <input type="number" id="weight" placeholder="Peso (kg)" required>
+                <input type="number" id="height" placeholder="Altura (cm)" required>
+                <input type="number" id="age" placeholder="Edad" required>
+                <select id="goal" required>
+                    <option value="">Selecciona tu objetivo</option>
+                    <option value="gain">Ganar músculo</option>
+                    <option value="lose">Bajar grasa</option>
+                </select>
+                <button type="button" onclick="calculate()">Calcular</button>
+                <div id="result"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo">
+            <p>Transforma tu cuerpo con nosotros.</p>
+            <div class="socials">
+                <a href="https://facebook.com/gymsoca" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/gymsoca" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/gymsoca" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/gymsoca" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

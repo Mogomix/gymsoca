@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion - Gym Soca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pF1Nf5tukpYIbEYgCGh3KXQMOY2r4+f01OwhZy8p4q/SeQ0VQku2QX93F0sR8DvZKL4dM1z7G3j2Hw+j9Yd2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/gymsoca.jpg">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html"><img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo"></a>
+            <ul id="nav-menu">
+                <li><a href="index.html#about">Sobre Nosotros</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="index.html#plans">Planes</a></li>
+                <li><a href="inscripcion.html">Inscripcion</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+            </ul>
+            <a href="index.html#contact" class="cta-button">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Formulario de Inscripcion</h1>
+            <p>Completa tus datos y aparta tu plan o cupo de clase en menos de 2 minutos.</p>
+        </div>
+    </section>
+
+    <section class="enrollment">
+        <div class="container">
+            <h2>Datos del Alumno</h2>
+            <p class="enrollment-note">Si llegas desde Planes o Reservas, ya te dejamos opciones preseleccionadas.</p>
+
+            <form id="registration-form" class="enrollment-form">
+                <div class="form-grid">
+                    <input type="text" id="fullName" placeholder="Nombre completo" required>
+                    <input type="text" id="document" placeholder="Documento de identidad" required>
+                    <input type="tel" id="phone" placeholder="Telefono" required>
+                    <input type="email" id="email" placeholder="Correo electronico" required>
+                    <input type="number" id="age" placeholder="Edad" min="14" max="99" required>
+                    <select id="goal" required>
+                        <option value="">Objetivo principal</option>
+                        <option value="hipertrofia">Ganar masa muscular</option>
+                        <option value="fuerza">Aumentar fuerza</option>
+                        <option value="perdida">Reducir grasa</option>
+                        <option value="acondicionamiento">Acondicionamiento general</option>
+                    </select>
+                    <select id="membershipPlan" required>
+                        <option value="">Selecciona un plan</option>
+                        <option value="Plan Basico">Plan Basico</option>
+                        <option value="Plan Premium">Plan Premium</option>
+                        <option value="Plan VIP">Plan VIP</option>
+                    </select>
+                    <select id="classSchedule">
+                        <option value="">Clase / horario (opcional)</option>
+                        <option value="No aplica">No aplica</option>
+                        <option value="Lunes Pierna 06:00 AM">Lunes - Pierna 06:00 AM</option>
+                        <option value="Lunes Pierna 07:00 PM">Lunes - Pierna 07:00 PM</option>
+                        <option value="Martes Pecho y Triceps 06:00 AM">Martes - Pecho y Triceps 06:00 AM</option>
+                        <option value="Martes Pecho y Triceps 06:00 PM">Martes - Pecho y Triceps 06:00 PM</option>
+                        <option value="Miercoles Espalda y Hombro 07:00 PM">Miercoles - Espalda y Hombro 07:00 PM</option>
+                        <option value="Jueves Fuerza Total 06:00 PM">Jueves - Fuerza Total 06:00 PM</option>
+                        <option value="Viernes Cardio Funcional 05:00 PM">Viernes - Cardio Funcional 05:00 PM</option>
+                        <option value="Sabado Bootcamp 08:00 AM">Sabado - Bootcamp 08:00 AM</option>
+                    </select>
+                    <input type="date" id="startDate" required>
+                    <select id="paymentFrequency" required>
+                        <option value="">Frecuencia de pago</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="trimestral">Trimestral</option>
+                        <option value="semestral">Semestral</option>
+                    </select>
+                </div>
+
+                <label class="terms-line">
+                    <input type="checkbox" id="terms" required>
+                    Acepto terminos y condiciones del gimnasio.
+                </label>
+
+                <button type="submit">Finalizar Inscripcion</button>
+                <div id="enrollment-result" class="form-success"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="img/gymsoca.jpg" alt="Gym Soca Logo" class="logo">
+            <p>Transforma tu cuerpo con nosotros.</p>
+            <div class="socials">
+                <a href="https://facebook.com/gymsoca" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/gymsoca" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/gymsoca" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/gymsoca" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
