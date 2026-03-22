@@ -1,4 +1,4 @@
-# gymsoca_flutter
+# gymsoca
 
 A new Flutter project.
 

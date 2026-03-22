@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:gymsoca_flutter/main.dart';
+import 'package:gymsoca/main.dart';
 
 void main() {
   testWidgets('Gym Soca app renders greeting', (WidgetTester tester) async {

@@ -1,6 +1,6 @@
 {
-    "name": "gymsoca_flutter",
-    "short_name": "gymsoca_flutter",
+    "name": "gymsoca",
+    "short_name": "gymsoca",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
