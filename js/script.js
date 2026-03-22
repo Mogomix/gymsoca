@@ -181,3 +181,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Android APK auto selector
+document.addEventListener('DOMContentLoaded', () => {
+    const autoBtn = document.getElementById('auto-download-btn');
+    const targetText = document.getElementById('download-target-text');
+
+    if (!autoBtn || !targetText) {
+        return;
+    }
+
+    const ua = (navigator.userAgent || '').toLowerCase();
+    let href = 'downloads/app-arm64-v8a-release.apk';
+    let label = 'Descarga automática (arm64 recomendada)';
+    let description = 'Detectamos Android moderno: te recomendamos arm64.';
+
+    if (ua.includes('x86_64') || ua.includes('amd64')) {
+        href = 'downloads/app-x86_64-release.apk';
+        label = 'Descarga automática (x86_64 detectado)';
+        description = 'Detectamos arquitectura x86_64 en tu dispositivo/emulador.';
+    } else if (ua.includes('armeabi-v7a') || ua.includes('armv7')) {
+        href = 'downloads/app-armeabi-v7a-release.apk';
+        label = 'Descarga automática (armeabi-v7a detectado)';
+        description = 'Detectamos un dispositivo de 32 bits (armeabi-v7a).';
+    }
+
+    autoBtn.href = href;
+    autoBtn.innerHTML = `<i class="fas fa-bolt"></i> ${label}`;
+    targetText.textContent = description;
+});

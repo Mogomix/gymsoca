@@ -413,6 +413,57 @@ section p {
     border-radius: 10px;
 }
 
+/* Android App Download */
+.app-download {
+    background-color: #0f0f0f;
+}
+
+.download-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.download-meta {
+    margin-top: -18px;
+    margin-bottom: 18px;
+    color: #9aa9bd;
+    font-size: 0.95rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #e10600;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 14px 26px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #c00500;
+}
+
+.btn-download.btn-download-secondary {
+    background-color: transparent;
+    border: 1px solid #e10600;
+}
+
+.btn-download.btn-download-secondary:hover {
+    background-color: #e10600;
+}
+
+.download-help {
+    margin-top: 16px;
+    color: #b8c4d6;
+    font-size: 0.95rem;
+}
+
 /* WhatsApp Button */
 .whatsapp-float {
     position: fixed;
