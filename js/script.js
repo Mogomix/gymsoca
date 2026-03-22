@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    autoBtn.href = 'downloads/gymsoca.apk';
+    autoBtn.href = 'https://github.com/Mogomix/gymsoca/raw/main/downloads/gymsoca.apk';
     autoBtn.innerHTML = '<i class="fas fa-bolt"></i> Descargar app';
     targetText.textContent = 'Descarga la app de Gymsoca e instalala en tu Android.';
 });
