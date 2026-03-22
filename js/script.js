@@ -31,15 +31,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Smooth scrolling (se integra con cierre de menú en el bloque de hamburger)
 
 // Calculator function
 function calculate() {
@@ -102,14 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-
-        // Cerrar menú al seleccionar un enlace (móvil)
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
     }
+
+    // Smooth scroll + cerrar menú en enlaces de anclaje
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (navMenu) navMenu.classList.remove('active');
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 });
 
 // Store page section filters
